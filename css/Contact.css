@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-main-color {
+  color: #e21836 !important;
+}
+
+.text-main-font {
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+.nav-link {
+  font-size: 16px;
+  position: relative;
+
+}
+
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: #e21836;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: rgb(226, 24, 54) !important;
+}
+
+/* 🔹 Hero Section */
+.hero-section {
+  background-image: url(../img/b1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(187, 20, 45, 0.5);
+}
+
+.hero-section>div {
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔹 Fix overlap due to fixed-top navbar */
+.hero-section {
+  margin-top: 56px;
+  /* height of navbar */
+}
+/* 🔹 Contact Details */
+#contact-details .details span,
+#contact-details .details h2,
+#contact-details .details h3,
+#contact-details .details p
+{
+  color: #fff !important;
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+#contact-details .details i {
+  color: #fff !important;
+}
+
+/* Icon hover effect */
+.icon-item i {
+  transition: all 0.3s ease;
+}
+
+.icon-item:hover i {
+  color: #e21836;
+  transform: translateY(-3px);
+}
+
+/* 🔹 Form Styling */
+#form-details form span,
+#form-details form h2 {
+  color: #fff !important;
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+#form-details form input::placeholder,
+#form-details form textarea::placeholder {
+  color: #ddd;
+}
+
+/* 🔹 Button Animation */
+.submit-btn {
+  font-size: 22px;
+  transition: all 0.3s ease;
+  background-color: #e21836;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #c5162f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(226, 24, 54, 0.6);
+}
+
+
+

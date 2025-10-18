@@ -1,0 +1,141 @@
+/* Reset and main styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.text-main-color {
+  color: #e21836 !important;
+}
+
+.text-main-font {
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+/* Navbar */
+.nav-link {
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: #e21836;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transition: width 0.5s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #e21836 !important;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url(../img/img3.webp);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+  margin-top: 56px; /* fix navbar overlap */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(187, 20, 45, 0.7);
+}
+
+.hero-section  div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide form by default */
+.profile-form {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
+  transform: translateY(-10px);
+}
+
+/* Visible form */
+.profile-form.show {
+  max-height: 1000px; /* enough space for inputs */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep info text visible */
+.info-text {
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+/* Style for disabled inputs */
+.profile-form .form-control[disabled] {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Buttons */
+.btn-edit,
+.btn-submit {
+  background-color: #e21836;
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(226, 24, 54, 0.4);
+}
+.btn-edit:hover,
+.btn-submit:hover {
+  background-color: #ff2e4d;
+  box-shadow: 0 0 15px rgba(255, 46, 77, 0.6);
+}
+
+/* Profile Card */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(226, 24, 54, 0.4);
+}
+
+/* Inputs */
+.profile-form .form-control {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+}
+.profile-form .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(226, 24, 54, 0.6);
+  border-color: #e21836;
+}
+.profile-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}

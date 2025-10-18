@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-main-color {
+  color: #e21836 !important;
+}
+
+.text-main-font {
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+.nav-link {
+  font-size: 16px;
+  position: relative;
+
+}
+
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: #e21836;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: rgb(226, 24, 54) !important;
+}
+.text-main-color {
+  color: #e21836 !important;
+}
+
+.btn-main-color {
+  background-color: #e21836;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-main-color:hover {
+  background-color: #c5162f;
+  transform: scale(1.05);
+}
+
+.ticket-card {
+  background-color: #222;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.ticket-card:hover {
+  border-color: #e21836;
+  transform: scale(1.02);
+}
+
+img {
+  object-fit: cover;
+  width: 80%;
+  height: 20px;
+}
+
+h1, h4, h5 {
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+h5,p,li,strong{
+    color: #fff;
+}

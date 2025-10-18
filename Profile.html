@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z"/></svg>'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/profile.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+
+  <nav class=" navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container">
+            <i class="fa-solid fa-music text-main-color mx-2"></i>
+            <a class=" text-main-font text-main-color navbar-brand fs-3" href="home.html"> The Celebration Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white  " href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white  " href="home.html#Events">Events</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="Contact.html">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="Cart.html"><i class="fa-solid fa-ticket"></i></a>
+                    <li class="nav-item">
+                        <a class=" text-main-color nav-link" href="Profile.html"><i class="fa-solid fa-user "></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+
+  <!--start header -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="text-white">
+            <h1 class="fw-bold display-4">#Your Profile</h1>
+            <p class="lead">Everything about you, in one place.</p>
+        </div>
+    </header>
+    <!-- header end -->
+
+  <section id="profile-info" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card profile-card p-4 shadow-lg">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-main-color fw-bold">Profile Information</h2>
+            <button class="btn btn-edit">Edit</button>
+          </div>
+          <div class="info-text mb-4">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+          </div>
+          <form class="profile-form">
+            <input type="text" class="form-control mb-3" placeholder="Your Name" disabled>
+            <input type="email" class="form-control mb-3" placeholder="Email" disabled>
+            <input type="password" class="form-control mb-3" placeholder="Password" disabled>
+            <input type="password" class="form-control mb-4" placeholder="Confirm Password" disabled>
+            <div class="text-center">
+              <button type="submit" class="btn btn-submit">Submit</button>
+            </div>
+          </form>
+           <div class="text-center mt-4">
+              <button id="logoutBtn" class="btn btn-outline-light">Log Out</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- footer start -->
+    <section class="footer bg-dark text-light py-5">
+        <div class="container px-4">
+            <div class="row">
+                <div class="col-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-music text-main-color mb-4 mx-2"></i>
+                        <h2 class="mb-4 text-main-font text-main-color me-5">The Celebration Hub</h2>
+                    </div>
+                    <p>015509287622</p>
+                    <p>01020948595</p>
+                    <p>01550192544</p>
+                    <p>01013164451</p>
+                </div>
+                <div class="col">
+                    <h4 class="mb-4  pt-3 fw-bold text-main-color">work team</h4>
+                    <p>Yahya Ahmed Nagy</p>
+                    <p>Ali Mohamed Ali</p>
+                    <p>Ali Maher Bedouin</p>
+                    <p>Mohamad Hamdi Abdel-Rasoul</p>
+                </div>
+                <div class="col col-lg-3 text-lg-end">
+                    <h4 class="mb-4 pt-3 fw-bold text-main-color mx-5">Social Media</h4>
+
+
+                    <div class="d-flex justify-content-lg-end mb-2">
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-instagram fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-facebook fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-github fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-linkedin fs-2 text-primary"></i></a>
+                    </div>
+
+
+                    <div class="d-flex justify-content-lg-end mb-2">
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-instagram fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-facebook fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-github fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-linkedin fs-2 text-primary"></i></a>
+                    </div>
+
+                    <div class="d-flex justify-content-lg-end mb-2">
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-instagram fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-facebook fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-github fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-linkedin fs-2 text-primary"></i></a>
+                    </div>
+
+                    <div class="d-flex justify-content-lg-end">
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-instagram fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-facebook fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-github fs-2 text-primary"></i></a>
+                        <a href="" class="text-decoration-none mx-2"><i
+                                class="fa-brands fa-linkedin fs-2 text-primary"></i></a>
+                    </div>
+                </div>
+
+                <div class="col col-lg-3 text-lg-end">
+                    <div class="col">
+                        <h4 class="mb-4 pt-3 fw-bold py-4"></h4>
+                        <ul class="list-unstyled">
+                            <li><span class="text-decoration-none text-light" href="">All Tickets on Sale</span></li>
+                            <li><span class="text-decoration-none text-light" href="">Hot Events</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <p>2025 © Coding Yaar</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- footer end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

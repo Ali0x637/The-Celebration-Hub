@@ -1,0 +1,104 @@
+/* ============ Global Reset ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============ Page Background ============ */
+.section {
+  background-image: url(../img/Sign-in.background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============ Main Card ============ */
+.main {
+  background: rgba(32, 39, 45, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(226, 24, 54, 0.4);
+}
+
+/* ============ Headings ============ */
+h1, h2 {
+  color: white;
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+.text-main-color {
+  color: #e21836 !important;
+}
+
+/* ============ Inputs ============ */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(226, 24, 54, 0.6);
+  border-color: #e21836;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============ Buttons ============ */
+.btn {
+  background-color: #e21836;
+  color: white;
+  width: 120px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(226, 24, 54, 0.4);
+}
+
+.btn:hover {
+  background-color: #ff2e4d;
+  box-shadow: 0 0 15px rgba(255, 46, 77, 0.6);
+}
+
+/* ============ Links ============ */
+a {
+  color: #e21836;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff2e4d;
+}
+
+/* ============ Animations ============ */
+.main {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-in-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

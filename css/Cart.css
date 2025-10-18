@@ -1,0 +1,283 @@
+/* Cart styles */
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    padding: 32px;
+    align-items: start;
+}
+
+/* Solo cart view: center the cart sidebar and make it wider for focused checkout */
+.cart-container.solo-cart {
+    display: flex;
+    justify-content: center;
+    padding: 36px 20px;
+}
+
+.cart-sidebar.solo {
+    width: 650px; /* wider sidebar for checkout */
+    max-width: calc(100% - 40px);
+}
+
+.products {
+    color: #ddd;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+/* Vertical product list used on the Cart page */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.product-list .product-card {
+    display: block; /* make cards full-width in the list */
+}
+
+.singer-name {
+    margin: 6px 0 0;
+    color: #dcdcdc;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* When singer-name is an h3, make it more prominent */
+h3.singer-name {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+/* Cart row typography */
+.cart-sidebar .fw-bold {
+    font-size: 18px; /* ticket title */
+    font-weight: 700;
+}
+.cart-sidebar .singer-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffdede; /* slightly prominent color */
+}
+
+.ticket-type {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+/* Improve horizontal scrolling experience: hide scrollbar on modern browsers while keeping it accessible */
+.product-grid--horizontal::-webkit-scrollbar { height: 8px; }
+.product-grid--horizontal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 8px; }
+
+.product-card {
+    background: #161a1d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product-body {
+    padding: 12px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-actions .price {
+    font-weight: 700;
+    color: #e8e8e8;
+}
+
+.custom-btn {
+    background-color: #e21836;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Quantity control small adjustments for Bootstrap buttons inside cart */
+.qty-decrease, .qty-increase {
+    width: 34px;
+    height: 30px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.qty-value {
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-sidebar {
+    background: #0f1315;
+    padding: 16px;
+    border-radius: 12px;
+    color: #ddd;
+    position: sticky;
+    top: 24px;
+}
+
+.cart-items {
+    min-height: 120px;
+    max-height: 360px;
+    overflow: auto;
+    margin-bottom: 12px;
+}
+
+/* Make the cart list inside the sidebar scrollable when it grows tall
+   so many ticket rows (e.g. 10+) scroll inside the card while keeping
+   the subtotal and checkout button visible. */
+.cart-sidebar .list-group {
+    max-height: 420px; /* adjust if you want a taller/shorter area */
+    overflow-y: auto;
+    padding: 10px; /* give a bit of breathing room inside the list */
+    margin: 0;
+}
+
+.cart-sidebar .list-group::-webkit-scrollbar {
+    width: 8px;
+}
+.cart-sidebar .list-group::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    margin-bottom: 8px;
+}
+
+.cart-item .meta {
+    flex: 1;
+}
+
+.cart-item .qty {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.qty button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 6px;
+}
+
+.remove-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #fff;
+}
+.remove-item i {
+    font-size: 14px;
+    color: #fff;
+}
+.remove-item:hover {
+    background: rgba(255, 0, 0, 0.12);
+    border-color: rgba(255,0,0,0.25);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+@media (max-width: 880px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-sidebar {
+        position: relative;
+        top: 0;
+    }
+}
+
+/* Page hero used on Cart: 'Your Tickets' */
+.page-hero {
+    position: relative;
+    height: 320px; /* lower height to reduce pixelation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0; /* glued to navbar */
+    background-image: url('../img/Partytheme.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(46, 4, 10, 0.5);
+    
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.page-hero__content h1 {
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Helper class to remove the default body offset on pages where we want the
+   hero background to sit flush under the fixed navbar. Use on the <body>
+   element (e.g. <body class="main no-navbar-gap">). */
+.no-navbar-gap {
+    padding-top: 0 !important;
+}
+
+/* Keep the hero's visible content from being covered by the fixed navbar by
+   adding equivalent top padding to the hero when the body has .no-navbar-gap.
+   Adjust the 80px value if your navbar height changes. */
+.no-navbar-gap .page-hero {
+    padding-top: 80px;
+    box-sizing: border-box;
+}
