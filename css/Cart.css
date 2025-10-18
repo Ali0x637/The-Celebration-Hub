@@ -7,7 +7,7 @@
     align-items: start;
 }
 
-/* Solo cart view: center the cart sidebar and make it wider for focused checkout */
+
 .cart-container.solo-cart {
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .cart-sidebar.solo {
-    width: 650px; /* wider sidebar for checkout */
+    width: 650px; 
     max-width: calc(100% - 40px);
 }
 
@@ -29,7 +29,7 @@
     gap: 18px;
 }
 
-/* Vertical product list used on the Cart page */
+
 .product-list {
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
 }
 
 .product-list .product-card {
-    display: block; /* make cards full-width in the list */
+    display: block; 
 }
 
 .singer-name {
@@ -47,22 +47,22 @@
     opacity: 0.9;
 }
 
-/* When singer-name is an h3, make it more prominent */
+
 h3.singer-name {
     font-size: 18px;
     color: #fff;
     margin-bottom: 6px;
 }
 
-/* Cart row typography */
+
 .cart-sidebar .fw-bold {
-    font-size: 18px; /* ticket title */
+    font-size: 18px; 
     font-weight: 700;
 }
 .cart-sidebar .singer-name {
     font-size: 20px;
     font-weight: 700;
-    color: #ffdede; /* slightly prominent color */
+    color: #ffdede; 
 }
 
 .ticket-type {
@@ -71,7 +71,7 @@ h3.singer-name {
     margin: 0 0 8px;
 }
 
-/* Improve horizontal scrolling experience: hide scrollbar on modern browsers while keeping it accessible */
+
 .product-grid--horizontal::-webkit-scrollbar { height: 8px; }
 .product-grid--horizontal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 8px; }
 
@@ -114,7 +114,7 @@ h3.singer-name {
     cursor: pointer;
 }
 
-/* Quantity control small adjustments for Bootstrap buttons inside cart */
+
 .qty-decrease, .qty-increase {
     width: 34px;
     height: 30px;
@@ -144,13 +144,11 @@ h3.singer-name {
     margin-bottom: 12px;
 }
 
-/* Make the cart list inside the sidebar scrollable when it grows tall
-   so many ticket rows (e.g. 10+) scroll inside the card while keeping
-   the subtotal and checkout button visible. */
+
 .cart-sidebar .list-group {
-    max-height: 420px; /* adjust if you want a taller/shorter area */
+    max-height: 420px; 
     overflow-y: auto;
-    padding: 10px; /* give a bit of breathing room inside the list */
+    padding: 10px; 
     margin: 0;
 }
 
@@ -233,14 +231,14 @@ h3.singer-name {
     }
 }
 
-/* Page hero used on Cart: 'Your Tickets' */
+
 .page-hero {
     position: relative;
-    height: 320px; /* lower height to reduce pixelation */
+    height: 320px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0; /* glued to navbar */
+    margin-top: 0; 
     background-image: url('../img/Partytheme.jpg');
     background-size: cover;
     background-position: center;
@@ -267,16 +265,12 @@ h3.singer-name {
     margin: 0;
 }
 
-/* Helper class to remove the default body offset on pages where we want the
-   hero background to sit flush under the fixed navbar. Use on the <body>
-   element (e.g. <body class="main no-navbar-gap">). */
+
 .no-navbar-gap {
     padding-top: 0 !important;
 }
 
-/* Keep the hero's visible content from being covered by the fixed navbar by
-   adding equivalent top padding to the hero when the body has .no-navbar-gap.
-   Adjust the 80px value if your navbar height changes. */
+
 .no-navbar-gap .page-hero {
     padding-top: 80px;
     box-sizing: border-box;

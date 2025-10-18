@@ -180,7 +180,7 @@ if (checkoutBtn) {
             checkoutModal.hide();
             renderAllSidebars();
 
-            // 🎉 Create success popup (like "cart empty" alert)
+            // 🎉 Create success popup 
 const successDiv = document.createElement('div');
 successDiv.className = 'alert alert-success text-center position-fixed top-0 start-50 translate-middle-x mt-3 shadow';
 successDiv.style.zIndex = '2000';
@@ -188,7 +188,7 @@ successDiv.style.fontSize = '1.1rem';
 successDiv.innerHTML = '✅ Checkout completed successfully!';
 document.body.appendChild(successDiv);
 
-// ⏱ Fade out faster (1.5s)
+
 setTimeout(() => {
   successDiv.style.transition = 'opacity 0.5s ease';
   successDiv.style.opacity = '0';

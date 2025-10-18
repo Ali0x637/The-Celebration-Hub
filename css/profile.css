@@ -1,4 +1,4 @@
-/* Reset and main styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +44,7 @@
   background-position: center;
   height: 40vh;
   position: relative;
-  margin-top: 56px; /* fix navbar overlap */
+  margin-top: 56px; 
 }
 
 .hero-section::before {
@@ -62,7 +62,7 @@
   z-index: 1;
 }
 
-/* Hide form by default */
+
 .profile-form {
   max-height: 0;
   opacity: 0;
@@ -71,20 +71,20 @@
   transform: translateY(-10px);
 }
 
-/* Visible form */
+
 .profile-form.show {
-  max-height: 1000px; /* enough space for inputs */
+  max-height: 1000px; 
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Keep info text visible */
+
 .info-text {
   color: white;
   transition: opacity 0.3s ease;
 }
 
-/* Style for disabled inputs */
+
 .profile-form .form-control[disabled] {
   opacity: 0.7;
   pointer-events: none;

@@ -61,7 +61,7 @@
   z-index: 1;
 }
 
-/* 🔹 Fix overlap due to fixed-top navbar */
+
 .hero-section {
   margin-top: 56px;
   /* height of navbar */

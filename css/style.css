@@ -8,7 +8,7 @@
 /* Sign in */
 
 body {
-  padding-top: 80px; /* ارتفاع تقريبي يناسب حجم الـ navbar */
+  padding-top: 80px; 
 }
 
 
@@ -19,7 +19,7 @@ body {
 
 .main {
     background-color: #20272d;
-    /* background: transparent */
+    
 }
 
 h1 {
