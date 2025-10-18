@@ -147,23 +147,58 @@ document.addEventListener('DOMContentLoaded', () => {
     renderAllSidebars();
 
     const checkoutBtn = document.getElementById('checkout-btn');
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const subtotal = loadCart().reduce((sum, it) => sum + (it.price * it.quantity), 0);
-            if (subtotal === 0) {
-                alert('Your cart is empty. Add tickets before checking out.');
-                return;
-            }
-            const confirmMsg = `Proceed to checkout — subtotal: ${formatPriceUSD(subtotal)}?`;
-            if (confirm(confirmMsg)) {
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const subtotal = loadCart().reduce((sum, it) => sum + (it.price * it.quantity), 0);
 
-                localStorage.removeItem(CART_KEY);
-                alert('Checkout simulated — cart cleared.');
-                renderAllSidebars();
+        // 🛒 Empty cart alert (top popup)
+        if (subtotal === 0) {
+            const emptyDiv = document.createElement('div');
+            emptyDiv.className = 'alert alert-warning text-center position-fixed top-0 start-50 translate-middle-x mt-3 shadow';
+            emptyDiv.style.zIndex = '2000';
+            emptyDiv.innerHTML = '🛒 Your cart is empty! Add some items first.';
+            document.body.appendChild(emptyDiv);
+            setTimeout(() => emptyDiv.remove(), 2000);
+            return;
+        }
 
-                window.location.reload();
-            }
+        // 💳 Show confirmation modal (uses your HTML modal)
+        const confirmMsg = `Proceed to checkout — subtotal: ${formatPriceUSD(subtotal)}?`;
+        document.getElementById('checkoutModalText').textContent = confirmMsg;
+        const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+        checkoutModal.show();
+
+        // Remove previous event listeners
+        const confirmButton = document.getElementById('confirmCheckoutBtn');
+        const newButton = confirmButton.cloneNode(true);
+        confirmButton.parentNode.replaceChild(newButton, confirmButton);
+
+        // ✅ Confirm checkout logic
+        newButton.addEventListener('click', () => {
+            localStorage.removeItem(CART_KEY);
+            checkoutModal.hide();
+            renderAllSidebars();
+
+            // 🎉 Create success popup (like "cart empty" alert)
+const successDiv = document.createElement('div');
+successDiv.className = 'alert alert-success text-center position-fixed top-0 start-50 translate-middle-x mt-3 shadow';
+successDiv.style.zIndex = '2000';
+successDiv.style.fontSize = '1.1rem';
+successDiv.innerHTML = '✅ Checkout completed successfully!';
+document.body.appendChild(successDiv);
+
+// ⏱ Fade out faster (1.5s)
+setTimeout(() => {
+  successDiv.style.transition = 'opacity 0.5s ease';
+  successDiv.style.opacity = '0';
+  setTimeout(() => successDiv.remove(), 500);
+}, 700);
+
+
+        });
+ 
+
         });
     }
 });
